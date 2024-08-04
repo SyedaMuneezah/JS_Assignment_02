@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ //ARRAYS -->
+
+//  1. Declare an empty array using JS literal notation to store
+// student names in future.
+
+var studentNames = [];
+
+// 2. Declare an empty array using JS object notation to store
+// student names in future.
+
+var studentName = new Array();
+
+// 3. Declare and initialize a strings array.
+var arrayOfString = ["June","July","August","September"];
+
+// 4. Declare and initialize a numbers array.
+var numbers = [1,2,3,4,5,6,7];
+
+// 5. Declare and initialize a boolean array.
+var boolean = [true,false,true,false,true];
+
+// 6. Declare and initialize a mixed array.
+var mixedArray = ["June", 5 , true , "August", 10 , false];
+
+// 7. Declare and Initialize an array and store available
+// education qualifications in Pakistan (e.g. SSC, HSC, BCS,
+// BS, BCOM, MS, M. Phil., PhD). Show the listed
+// qualifications in your browser like:
+
+var qualifications = ["SSC","HSC","BCS","BS","BCOM","MS","M. Phil.","PhD"];
+document.write("Qualifications:" + "<br>" +  "<br>");
+document.write("1)" + qualifications[0] + "<br>");
+document.write("2)" +qualifications[1] + "<br>");
+document.write("3)" +qualifications[2] + "<br>");
+document.write("4)" +qualifications[3] + "<br>");
+document.write("5)" +qualifications[4] + "<br>");
+document.write("6)" +qualifications[5] + "<br>");
+document.write("7)" +qualifications[6] + "<br>");
+document.write("8)" +qualifications[7] + "<br>" + "<br>" + "<br>");
+
+
+// 8. Write a program to store 3 student names in an array.Take
+// another array to store score of these three students.
+// Assume that total marks are 500 for each student, display
+// the scores & percentages of students like:
+
+var studentName = ["Michael","John","Tony"];
+var score = [320 , 230 , 480];
+var totalMarks = 500;
+
+document.write("Score of " + studentName[0] + " is:" + score[0] + " percentage: " + score[0]/500*100 + "%" + "<br>");
+document.write("Score of " + studentName[1] + " is:" + score[1] + " percentage: " + score[1]/500*100 +  "%" + "<br>");
+document.write("Score of " + studentName[2] + " is:" + score[2] + " percentage: " + score[2]/500*100 +  "%" + "<br>" + "<br>");
+
+
+// 9. Initialize an array with color names. Display the array
+// elements in your browser.
+
+var color = ["Orange","Green","Red","Blue"];
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", " + "<br>");
+
+// a. Ask the user what color he/she wants to add to the
+// beginning & add that color to the beginning of the array.
+// Display the updated array in your browser.
+
+var userColor = prompt("What color do you want to add at the begining of array");
+var begin = color.unshift(userColor);
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", " + "<br>");
+
+// b. Ask the user what color he/she wants to add to the end
+// & add that color to the end of the array. Display the
+// updated array in your browser.
+
+var userColor = prompt("What color do you want to add at the end of array");
+var begin = color.push(userColor);
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + ", " + "<br>");
+
+// c. Add two more color to the beginning of the array.
+// Display the updated array in your browser.
+
+alert("Add two more color to the begin of array");
+var userColor1 = prompt("Add one");
+var userColor2 = prompt("Add one more");
+var begin = color.unshift(userColor1,userColor2);
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + ", ");
+document.write(color[6] + ", ");
+document.write(color[7] + ", " + "<br>");
+
+// d. Delete the first color in the array. Display the updated
+// array in your browser.
+
+var deleteColorStart = color.shift();
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + ", ");
+document.write(color[5] + ", ");
+document.write(color[6] + ", "  + "<br>");
+
+// e. Delete the last color in the array. Display the updated
+// array in your browser.
+
+var deleteColorLast = color.pop();
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + "<br>");
+
+// f. Ask the user at which index he/she wants to add a color
+// & color name. Then add the color to desired
+// position/index. . Display the updated array in your
+// browser.
+
+var userIndex = + prompt("Give me the index number at which you want to add color");
+var userColor =  prompt("Give me the color name at which you want to add color");
+var addIndex = color.splice(userIndex,0,userColor);
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + ", ");
+document.write(color[6] + "<br>");
+
+// g. Ask the user at which index he/she wants to delete
+// color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined
+// position/index. . Display the updated array in your
+// browser.
+
+var userIndexDel = + prompt("Give me the index number at which you want to delete color");
+var userDelete = + prompt("How many color you want to delete?");
+
+var deleteIndex = color.splice(userIndexDel,userDelete);
+document.write(color[0] + ", ");
+document.write(color[1] + ", ");
+document.write(color[2] + ", ");
+document.write(color[3] + ", ");
+document.write(color[4] + ", ");
+document.write(color[5] + ", ");
+
+
+    </script>
+</body
+</html>
